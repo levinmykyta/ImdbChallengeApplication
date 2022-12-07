@@ -1,8 +1,12 @@
 package com.bibs.imdbChallenge.vo;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class FilmOmdb {
 
+    @JsonProperty("Title") // essa anotação permite buscar propriedades diferentes, nesse caso com inicial maíuscula por causa da base de dados
     private String title;
+    @JsonProperty("Year")
     private String year;
 
     public String getTitle() {
