@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 // controla serviços e end points
 @RestController
-@RequestMapping("/film")
+@RequestMapping("/film") // controller
 public class FilmController {
 
     @Autowired
     private FilmService filmService;
 
     // método para fazer a chamada para o Service
-    @GetMapping("/omdb/{theme}")
+    @GetMapping("/omdb/{theme}") //end point
     public ResponseEntity<FilmOmdb> getFilm(@PathVariable String theme) {
         try {
             FilmOmdb filmeOMDB = filmService.getFilm(theme);
