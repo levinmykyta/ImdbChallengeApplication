@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class FilmService {
 
-    @Value("${imdb.apiKey}") // pega o que ta no applications.properties
+    @Value("${imdb.apikey}") // pega o que ta no applications.properties
     private String apiKey;
 
     // não é necessário criar um novo objeto (com new) pq o spring já permite a injeção de tipos
