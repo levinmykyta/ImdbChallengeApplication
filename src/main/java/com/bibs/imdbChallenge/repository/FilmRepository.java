@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository // repository serve para manipular info (como pegar/botar no banco)
 public interface FilmRepository extends JpaRepository<Film, Long> {
+
 }
