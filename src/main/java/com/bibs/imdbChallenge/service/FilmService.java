@@ -37,4 +37,9 @@ public class FilmService {
         return filmRepository.save(film);
     }
 
+    public Film getById(Long id) {
+        return filmRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Filme não encontrado"));
+    }
+
+    // os métodos de salvar e buscar por id (como o findById acima) é fruto da interface JpaReposity a qual o FilmRepository estende.
 }
