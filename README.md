@@ -19,3 +19,4 @@ Technologies used:
 - Spring Boot
 - Maven
 - H2
+- Hateoas
