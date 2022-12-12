@@ -28,15 +28,15 @@ public class FilmController {
     @GetMapping("/omdb/{theme}") //end point
     public ResponseEntity<FilmOmdb> getFilm(@PathVariable String theme) {
         try {
-            FilmOmdb filmeOMDB = filmService.getFilm(theme);
-            return ResponseEntity.status(HttpStatus.OK).body(filmeOMDB);
+            FilmOmdb filmOMDB = filmService.getFilm(theme);
+            return ResponseEntity.status(HttpStatus.OK).body(filmOMDB);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 
     // usamos o filmDTO para pegar infos do client. Para devolver (depois de salvo) usamos o filmVO (view object)
-    @PostMapping
+    @PostMapping // post is used to save info
     public ResponseEntity<FilmVO> saveFilm(@RequestBody FilmDTO filmDTO) {
         try {
             FilmVO filmVO = filmConverter.convertToFilmVO(filmService.save(filmDTO));
