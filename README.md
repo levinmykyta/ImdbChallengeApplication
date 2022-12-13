@@ -18,5 +18,6 @@ Technologies used:
 
 - Spring Boot
 - Maven
+- OpenFeign
 - H2
 - Hateoas
